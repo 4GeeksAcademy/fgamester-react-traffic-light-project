@@ -2,14 +2,8 @@ import React, { useState } from "react";
 
 
 
-const Light = ({ color }) => {
+const Light = ({ color, selected, turnedOn }) => {
 
-    const [unselected, setSelected] = useState(false);
-
-    const handleClick = () => {
-        setSelected(!unselected)
-    }
-
-    return (<div onClick={handleClick} className="light" style={{ backgroundColor: color, opacity: unselected ? 1 : 0.5 }} />)
+    return (<div onClick={turnedOn} className="light" style={{ backgroundColor: color, opacity: selected ? 1 : 0.2 }} />)
 };
 export default Light;
